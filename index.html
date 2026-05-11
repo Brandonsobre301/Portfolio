@@ -37,12 +37,7 @@
         }
 
         body {
-            /*NEW mesh integration */
-			background-image: linear-gradient(rgba(10, 10, 10, 0.30), rgba(10, 10, 10, 0.70)), url('header-mesh.jpg');
-			background-size: cover;
-			background-position: center top;
-			background-attachment: fixed;
-			background-repeat: no-repeat;
+          
 			
 			
 			/*existing body styles*/
@@ -375,7 +370,7 @@
     </style>
 </head>
 <body>
-
+	<div id="vanta-bg" style="postion: fixed; z-index: -1; top: 0; left: 0; width:100%; height: 100vh;"></div>
 <div class="container">
     <header>
         <div class="emblem-wrapper">
@@ -402,6 +397,7 @@
                 <div class="skill-badge"><i class="fab fa-html5"></i> HTML</div>
 				<div class="skill-badge"><i class="fab fa-css3-alt"></i> CSS </div>
 				<div class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</div>
+				<div class="skill-badge"><i class="fab fa-cuttlefish"></i> C++</div>
                 <div class="skill-badge"><i class="fab fa-react"></i> React.js</div>
                 <div class="skill-badge"><i class="fab fa-node-js"></i> Node.js</div>
                 <div class="skill-badge"><i class="fas fa-server"></i> Express.js</div>
@@ -423,6 +419,7 @@
 				<div class="skill-badge"><i class="fas fa-bolt"></i> FastAPI</div>
 				<div class="skill-badge"><i class="fas fa-plug"></i> REST APIs</div>
                 <div class="skill-badge"><i class="fas fa-robot"></i> OpenAI API</div>
+				<div class="skill-badge"><i class="fas fa-user-astronaut"></i> Postman</div>
                 <div class="skill-badge"><i class="fab fa-microsoft"></i> Microsoft Office</div>
             </div>
         </section>
@@ -601,8 +598,26 @@
         </section>
     </main>
 
-  
 </div>
-
+'''html
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></scripts>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+	<script>
+		VANTA.NET({
+			el: "#vanta-bg",
+			mouseControls: true,
+			touchControls: true,
+			gyroControls: false,
+			minHeight: 200.00,
+			minWidth: 200.00,
+			scale: 1.00,
+			scaleMobile: 1.00,
+			color: 0x00A3E0,
+			backroundColor: 0x050A10,
+			points: 12.00,
+			maxDistance: 22.00,
+			spacing: 18.00
+		})
+	</script>
 </body>
 </html>
